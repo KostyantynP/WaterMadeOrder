@@ -173,7 +173,7 @@ public class createOrderActivity extends AppCompatActivity {
         //     calculation of the cost fittings
 
         if (checkBoxFitting.isChecked()) {
-            priceFitting = 10;
+            priceFitting = 10+20+30+40;
 
         } else {
             priceFitting =0;
