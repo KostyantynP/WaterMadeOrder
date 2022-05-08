@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lime_green"
+    tools:context=".createOrderActivity">
+
+    <TextView
+        android:id="@+id/textViewHello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="@string/hello_user"
+        android:textColor="@color/olive_green"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollViewOrder"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/buttonFinishOrder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewHello">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <TableLayout
+                android:id="@+id/tableLayoutCustomer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/white">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:id="@+id/spinnerController"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="3"
+                        android:entries="@array/controller_type"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/editTextCountController"
+                        android:layout_width="48sp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:hint="@string/hint_count"
+                        android:inputType="number"
+                        android:textColor="@color/olive_green"
+                        android:textColorHint="@color/olive_green"
+                        android:textSize="24sp"/>
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:id="@+id/spinnerRainSensor"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="3"
+                        android:entries="@array/rain_sensor"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"/>
+
+                    <EditText
+                        android:id="@+id/editTextCountRainSensor"
+                        android:layout_width="48sp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:hint="@string/hint_count"
+                        android:inputType="number"
+                        android:textColor="@color/olive_green"
+                        android:textColorHint="@color/olive_green"
+                        android:textSize="24sp"/>
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:id="@+id/spinnerSprinklers"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="3"
+                        android:entries="@array/sprinklers"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/editTextCountSprinklers"
+                        android:layout_width="48sp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:hint="@string/hint_count"
+                        android:inputType="number"
+                        android:textColor="@color/olive_green"
+                        android:textColorHint="@color/olive_green"
+                        android:textSize="24sp"/>
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:id="@+id/spinnerNozzleMP"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="3"
+                        android:entries="@array/nozzle_mp"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"/>
+
+                    <EditText
+                        android:id="@+id/editTextCountNozzleMP"
+                        android:layout_width="48sp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:hint="@string/hint_count"
+                        android:inputType="number"
+                        android:textColor="@color/olive_green"
+                        android:textColorHint="@color/olive_green"
+                        android:textSize="24sp"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:id="@+id/spinnerNozzleSpray"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="3"
+                        android:entries="@array/nozzle_spray"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"/>
+
+                    <EditText
+                        android:id="@+id/editTextCountNozzleSpray"
+                        android:layout_width="48sp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:hint="@string/hint_count"
+                        android:inputType="number"
+                        android:textColor="@color/olive_green"
+                        android:textColorHint="@color/olive_green"
+                        android:textSize="24sp"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:id="@+id/spinnerNozzleRotor"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="3"
+                        android:entries="@array/nozzle_rotor"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"/>
+
+                    <EditText
+                        android:id="@+id/editTextCountNozzleRotor"
+                        android:layout_width="48sp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:hint="@string/hint_count"
+                        android:inputType="number"
+                        android:textColor="@color/olive_green"
+                        android:textColorHint="@color/olive_green"
+                        android:textSize="24sp"/>
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:id="@+id/spinnerValve"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="3"
+                        android:entries="@array/valve"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"/>
+
+                    <EditText
+                        android:id="@+id/editTextCountValve"
+                        android:layout_width="48sp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:hint="@string/hint_count"
+                        android:inputType="number"
+                        android:textColor="@color/olive_green"
+                        android:textColorHint="@color/olive_green"
+                        android:textSize="24sp"/>
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:id="@+id/spinnerBoxValve"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="3"
+                        android:entries="@array/box_valve"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"/>
+
+                    <EditText
+                        android:id="@+id/editTextCountBoxValve"
+                        android:layout_width="48sp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:hint="@string/hint_count"
+                        android:inputType="number"
+                        android:textColor="@color/olive_green"
+                        android:textColorHint="@color/olive_green"
+                        android:textSize="24sp"/>
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:id="@+id/spinnerKneeAdjustable"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="3"
+                        android:entries="@array/knee_adjustable"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"/>
+
+                    <EditText
+                        android:id="@+id/editTextCountKneeAdjustable"
+                        android:layout_width="48sp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:hint="@string/hint_count"
+                        android:inputType="number"
+                        android:textColor="@color/olive_green"
+                        android:textColorHint="@color/olive_green"
+                        android:textSize="24sp"/>
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:id="@+id/spinnerHydrant"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="3"
+                        android:entries="@array/hydrant"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"/>
+
+                    <EditText
+                        android:id="@+id/editTextCountHydrant"
+                        android:layout_width="48sp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:hint="@string/hint_count"
+                        android:inputType="number"
+                        android:textColor="@color/olive_green"
+                        android:textColorHint="@color/olive_green"
+                        android:textSize="24sp"/>
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:id="@+id/spinnerHydrantKey"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="3"
+                        android:entries="@array/hydrant_key"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"/>
+
+                    <EditText
+                        android:id="@+id/editTextCountHydrantKey"
+                        android:layout_width="48sp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:hint="@string/hint_count"
+                        android:inputType="number"
+                        android:textColor="@color/olive_green"
+                        android:textColorHint="@color/olive_green"
+                        android:textSize="24sp"/>
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:id="@+id/spinnerValveDrop"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="3"
+                        android:entries="@array/valve_drop"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"/>
+
+                    <EditText
+                        android:id="@+id/editTextCountValveDrop"
+                        android:layout_width="48sp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:hint="@string/hint_count"
+                        android:inputType="number"
+                        android:textColor="@color/olive_green"
+                        android:textColorHint="@color/olive_green"
+                        android:textSize="24sp"/>
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:id="@+id/spinnerTubeDrop"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="3"
+                        android:entries="@array/tube_drop"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"/>
+
+                    <EditText
+                        android:id="@+id/editTextCountTubeDrop"
+                        android:layout_width="48sp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:hint="@string/hint_count"
+                        android:inputType="number"
+                        android:textColor="@color/olive_green"
+                        android:textColorHint="@color/olive_green"
+                        android:textSize="24sp"/>
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:id="@+id/spinnerFittingDrop"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="3"
+                        android:entries="@array/fitting_drop"
+                        android:textColor="@color/olive_green"
+                        android:textSize="24sp"/>
+
+                    <EditText
+                        android:id="@+id/editTextCountFittingDrop"
+                        android:layout_width="48sp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:hint="@string/hint_count"
+                        android:inputType="number"
+                        android:textColor="@color/olive_green"
+                        android:textColorHint="@color/olive_green"
+                        android:textSize="24sp"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:id="@+id/spinnerPump"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="3"
+                        android:entries="@array/pump"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"/>
+
+                    <EditText
+                        android:id="@+id/editTextCountPump"
+                        android:layout_width="48sp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:hint="@string/hint_count"
+                        android:inputType="number"
+                        android:textColor="@color/olive_green"
+                        android:textColorHint="@color/olive_green"
+                        android:textSize="24sp"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:id="@+id/spinnerAutomaticsPump"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="3"
+                        android:entries="@array/pump_automatics"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"/>
+
+                    <EditText
+                        android:id="@+id/editTextCountAutomaticsPump"
+                        android:layout_width="48sp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:hint="@string/hint_count"
+                        android:inputType="number"
+                        android:textColor="@color/olive_green"
+                        android:textColorHint="@color/olive_green"
+                        android:textSize="24sp"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:id="@+id/spinnerElectricCable"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="3"
+                        android:entries="@array/electric_cable"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"/>
+
+                    <EditText
+                        android:id="@+id/editTextCountElectricCable"
+                        android:layout_width="48sp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:hint="@string/hint_count"
+                        android:inputType="number"
+                        android:textColor="@color/olive_green"
+                        android:textColorHint="@color/olive_green"
+                        android:textSize="24sp"/>
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:id="@+id/spinnerElectricRelay"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="3"
+                        android:entries="@array/electric_relay"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"/>
+
+                    <EditText
+                        android:id="@+id/editTextCountElectricRelay"
+                        android:layout_width="48sp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:hint="@string/hint_count"
+                        android:inputType="number"
+                        android:textColor="@color/olive_green"
+                        android:textColorHint="@color/olive_green"
+                        android:textSize="24sp"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:id="@+id/spinnerBarrel"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="3"
+                        android:entries="@array/barrel"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"/>
+
+                    <EditText
+                        android:id="@+id/editTextCountBarrel"
+                        android:layout_width="48sp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:hint="@string/hint_count"
+                        android:inputType="number"
+                        android:textColor="@color/olive_green"
+                        android:textColorHint="@color/olive_green"
+                        android:textSize="24sp"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:id="@+id/spinnerFloatBarrel"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="3"
+                        android:entries="@array/float_barrel"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"/>
+
+                    <EditText
+                        android:id="@+id/editTextCountFloatBarrel"
+                        android:layout_width="48sp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:hint="@string/hint_count"
+                        android:inputType="number"
+                        android:textColor="@color/olive_green"
+                        android:textColorHint="@color/olive_green"
+                        android:textSize="24sp"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:id="@+id/spinnerClipsMaterials"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="3"
+                        android:entries="@array/clips_material"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"/>
+                    <EditText
+                        android:id="@+id/editTextCountClipsMaterials"
+                        android:layout_width="48sp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:hint="@string/hint_count"
+                        android:inputType="number"
+                        android:textColor="@color/olive_green"
+                        android:textColorHint="@color/olive_green"
+                        android:textSize="24sp"/>
+                </TableRow>
+
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:id="@+id/spinnerTubeWater"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="3"
+                        android:entries="@array/tube"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"/>
+
+                    <EditText
+                        android:id="@+id/editTextCountTubeWater"
+                        android:layout_width="48sp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:hint="@string/hint_count"
+                        android:inputType="number"
+                        android:textColor="@color/olive_green"
+                        android:textColorHint="@color/olive_green"
+                        android:textSize="24sp"/>
+                </TableRow>
+
+
+                <CheckBox
+                    android:id="@+id/checkBoxFitting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:layoutDirection="rtl"
+                    android:text="@string/calculate_fitting"
+                    android:textSize="24sp"/>
+
+
+
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:text="@string/cost_of_worck"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <RadioButton
+                            android:id="@+id/radioButtonAuto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/check_coeficient"
+                            android:onClick="onClickAutoOrManual"/>
+                        <RadioButton
+                            android:id="@+id/radioButtonManual"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/check_manual"
+                            android:checked="true"
+                            android:onClick="onClickAutoOrManual"/>
+                    </RadioGroup>
+
+
+                <EditText
+                    android:id="@+id/editTextManualCost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:hint="@string/cost_of_worck_manual"
+                    android:inputType="number"
+                    android:textColor="@color/olive_green"
+                    android:textColorHint="@color/olive_green" />
+
+
+                <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical">
+
+                        <RadioButton
+                            android:id="@+id/radioButtonCoefficient15"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:visibility="invisible"
+                            android:text="@string/coefficient_1_5"
+                            android:onClick="onClickCoefficient"/>
+                        <RadioButton
+                            android:id="@+id/radioButtonCoefficient17"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:visibility="invisible"
+                            android:text="@string/coefficient_1_7"
+                            android:checked="true"
+                            android:onClick="onClickCoefficient"/>
+                    </RadioGroup>
+
+
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buttonFinishOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:backgroundTint="@color/white"
+        android:onClick="onClickSendOrder"
+        android:text="@string/button_confirm_order"
+        android:textColor="@color/olive_green"
+        android:textSize="18sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollViewOrder"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

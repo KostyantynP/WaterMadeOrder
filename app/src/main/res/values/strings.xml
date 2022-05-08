@@ -1,0 +1,247 @@
+<resources>
+    <string name="app_name">WaterMade Order</string>
+    <string name="logo_start">Логотип</string>
+    <string name="customer">Замовник</string>
+    <string name="default_name">Замовник</string>
+    <string name="default_number_of_phone">096 000 00 00</string>
+    <string name="number_of_phone">Номер телефону</string>
+    <string name="address_of_customer">Адреса замовника</string>
+    <string name="default_address">Чернівці</string>
+    <string name="warning_fill_fields">Поля замовник та номер телефону мають бути заповнені</string>
+    <string name="button_login">Створити замовлення</string>
+    <string name="button_confirm_order">Підтвердити замовлення</string>
+    <string name="text_view_hello">Оформлення замовлення</string>
+    <string name="order">Замовник: %s\n\n\t\t\t\t\tАдреса: %s\n\t\t\t\t\tТелефон: %s\n\n\nСписок замовлення:\n"</string>
+    <string name="hello_user">Замовник %s!</string>
+    <string name="order_detail">"\t\t\t\nВартість обладнання : \t\t\t\t\t %s\n Вартість робіт : \t\t\t\t\t %s\n\n Вартість замовлення: \t\t\t\t\t%s"</string>
+
+    <string name="hint_count">0</string>
+
+    <string-array name="controller_type">
+        <item>Контроллер X-Core401 Internal</item>
+        <item>Контроллер X-Core601 Internal</item>
+        <item>Контроллер X-Core801 Internal</item>
+        <item>Контроллер X-Core401 External</item>
+        <item>Контроллер X-Core601 External</item>
+        <item>Контроллер X-Core801 External</item>
+    </string-array>
+    <integer-array name="controller_price">
+        <item>8798</item>
+        <item>9833</item>
+        <item>12420</item>
+        <item>13455</item>
+        <item>15525</item>
+        <item>18630</item>
+    </integer-array>
+
+    <string-array name="rain_sensor">
+        <item>Датчик дощу Mini Click</item>
+        <item>Датчик дощу Rain-Click</item>
+        <item>Датчик сон. синхр. Solar-sync-sen</item>
+    </string-array>
+    <integer-array name="rain_sensor_price">
+        <item>4546</item>
+        <item>4546</item>
+        <item>13563</item>
+    </integer-array>
+
+
+    <string-array name="sprinklers">
+        <item>Дощувач PROS04</item>
+    </string-array>
+    <integer-array name="sprinklers_price">
+        <item>279</item>
+    </integer-array>
+
+
+    <string-array name="nozzle_mp">
+        <item>Форсунка MP Rotator</item>
+    </string-array>
+    <integer-array name="nozzle_mp_price">
+        <item>1087</item>
+    </integer-array>
+
+    <string-array name="nozzle_spray">
+        <item>Форсунка Спрей</item>
+    </string-array>
+    <integer-array name="nozzle_spray_price">
+        <item>167</item>
+    </integer-array>
+
+    <string-array name="nozzle_rotor">
+        <item>Дощувач Rotor</item>
+    </string-array>
+    <integer-array name="nozzle_rotor_price">
+        <item>1553</item>
+    </integer-array>
+
+    <string-array name="valve">
+        <item>Клапан PGV-101G-B</item>
+        <item>Клапан PGV-100G-B</item>
+    </string-array>
+    <integer-array name="valve_price">
+        <item>2266</item>
+        <item>2266</item>
+    </integer-array>
+
+    <string-array name="box_valve">
+        <item>Прямокутне відро Standart</item>
+        <item>Кругле відро 10\'</item>
+        <item>Кругле відро 6\'</item>
+    </string-array>
+    <integer-array name="box_price">
+        <item>2500</item>
+        <item>1700</item>
+        <item>1000</item>
+    </integer-array>
+
+    <string-array name="knee_adjustable">
+        <item>Коліно шарнірне SJ-7512</item>
+        <item>Коліно шарнірне SJ-7506</item>
+        <item>Коліно шарнірне SJ-512</item>
+        <item>Коліно шарнірне SJ-506</item>
+    </string-array>
+    <integer-array name="knee_adjustable_price">
+        <item>339</item>
+        <item>306</item>
+        <item>323</item>
+        <item>269</item>
+    </integer-array>
+
+    <string-array name="hydrant">
+        <item>Водяна колонка (гідрант) 3_4</item>
+        <item>Водяна колонка відро (гідрант) з краном</item>
+    </string-array>
+    <integer-array name="hydrant_price">
+        <item>1000</item>
+        <item>2500</item>
+    </integer-array>
+
+    <string-array name="hydrant_key">
+        <item>Ключ до гідранта</item>
+        <item>Ключ до гідранта з краном</item>
+    </string-array>
+    <integer-array name="hydrant_key_price">
+        <item>312</item>
+        <item>1312</item>
+    </integer-array>
+
+    <string-array name="valve_drop">
+        <item>Клапан капля PCZ101–25 (1,7 bar)</item>
+        <item>Клапан капля PCZ101–40 (2,5 bar)</item>
+    </string-array>
+    <integer-array name="valve_drop_price">
+        <item>8504</item>
+        <item>8504</item>
+    </integer-array>
+
+    <string-array name="tube_drop">
+        <item>Труба крапельного зрошення junior</item>
+        <item>Труба крапельного зрошення Braun</item>
+    </string-array>
+    <integer-array name="tube_drop_price">
+        <item>80</item>
+        <item>120</item>
+    </integer-array>
+
+    <string-array name="fitting_drop">
+        <item>Фітінг для капельного поливу</item>
+    </string-array>
+    <integer-array name="fitting_drop_price">
+        <item>2000</item>
+    </integer-array>
+
+    <string name="fitting_tube">\tФітінг</string>
+    <string name="calculate_fitting">Розрахувати фітінг</string>
+    <string name="cost_of_worck">Вартість робіт:</string>
+    <string name="check_coeficient">Вказати коефіцієнт</string>
+    <string name="check_manual">Вказати вручну</string>
+    <string name="coefficient_1_5">Коефіцієнт 1,5</string>
+    <string name="coefficient_1_7">Коефіцієнт 1,7</string>
+    <string name="cost_of_worck_manual">Вкажіть вартість робіт</string>
+
+    <string-array name="tube">
+        <item>Труба 25</item>
+        <item>Труба 32</item>
+        <item>Труба 16</item>
+        <item>Труба 40</item>
+        <item>Труба 50</item>
+    </string-array>
+
+
+    <string-array name="pump">
+        <item>Насос занурювальний ++</item>
+        <item>Насос зовнішній ++</item>
+        <item>Насос занурювальний</item>
+        <item>Насос зовнішній</item>
+    </string-array>
+    <integer-array name="pump_price">
+        <item>36000</item>
+        <item>18000</item>
+        <item>15000</item>
+        <item>11000</item>
+    </integer-array>
+
+    <string-array name="pump_automatics">
+        <item>Пресконтроль Swichmatick</item>
+        <item>пресконтроль Pedrollo</item>
+        <item>Пресконтроль</item>
+    </string-array>
+    <integer-array name="pump_automatics_price">
+        <item>6500</item>
+        <item>7000</item>
+        <item>5000</item>
+    </integer-array>
+
+    <string-array name="electric_cable">
+        <item>Кабель електричний 2х0,75</item>
+    </string-array>
+    <integer-array name="electric_cable_price">
+        <item>37</item>
+    </integer-array>
+
+    <string-array name="electric_relay">
+        <item>Електричне реле 24V</item>
+    </string-array>
+    <integer-array name="electric_relay_price">
+        <item>2300</item>
+    </integer-array>
+
+    <string-array name="barrel">
+        <item>Ємність 3 м.куб.</item>
+        <item>Ємність 0,75 м.куб</item>
+        <item>Ємність 1 м.куб</item>
+        <item>Ємність 2 м.куб</item>
+    </string-array>
+    <integer-array name="barrel_price">
+        <item>42000</item>
+        <item>15000</item>
+        <item>22000</item>
+        <item>32000</item>
+    </integer-array>
+
+    <string-array name="float_barrel">
+        <item>Поплавок механічний</item>
+        <item>Поплавок електронний</item>
+        <item>Поплавок мех.+електронний</item>
+    </string-array>
+    <integer-array name="float_barrel_price">
+        <item>1100</item>
+        <item>800</item>
+        <item>1800</item>
+    </integer-array>
+
+    <string-array name="clips_material">
+        <item>Кріпильно витратні матеріали 2</item>
+        <item>Кріпильно витратні матеріали 4</item>
+        <item>Кріпильно витратні матеріали 6</item>
+        <item>Кріпильно витратні матеріали 8</item>
+    </string-array>
+    <integer-array name="clips_material_price">
+        <item>2000</item>
+        <item>4000</item>
+        <item>6000</item>
+        <item>8000</item>
+    </integer-array>
+
+</resources>
